@@ -10,7 +10,15 @@ public class Triangle {
     this.side2 = side2;
     this.side3 = side3;
   }
-
+  public int getLongestSide() {
+    if (this.side1 > this.side2 && this.side1 > this.side3) {
+      return this.side1;
+    } else if (this.side2 > this.side1 && this.side2 > this.side3) {
+      return this.side2;
+    } else {
+      return this.side3;
+    }
+  }
   // TODO implement me!
   public double calculateArea() {
     return 0;
