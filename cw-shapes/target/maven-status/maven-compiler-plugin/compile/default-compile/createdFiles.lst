@@ -1,8 +1,9 @@
 edu/uob/TriangleVariant.class
 edu/uob/Shapes.class
+edu/uob/Main.class
 edu/uob/Triangle.class
-edu/uob/Circle.class
-edu/uob/MultiVariantShape.class
 edu/uob/Colour.class
+edu/uob/MultiVariantShape.class
+edu/uob/Circle.class
 edu/uob/TwoDimensionalShape.class
 edu/uob/Rectangle.class
