@@ -30,6 +30,6 @@ public class Triangle extends TwoDimensionalShape{
   }
 
   public String toString() {
-    return "Triangle with 3 sides: " + this.side1 + " " + this.side2 + " " + this.side3 + ", " + super.toString();
+    return this.getClass().getSimpleName() +" with 3 sides: " + this.side1 + " " + this.side2 + " " + this.side3 + ", " + super.toString();
   }
 }
