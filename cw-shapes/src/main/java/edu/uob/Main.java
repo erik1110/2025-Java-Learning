@@ -12,8 +12,14 @@ public class Main {
         shape.setColour(Colour.BLACK);
         System.out.println(shape);
 
-        shape = new Triangle(3,4,5);
-        shape.setColour(Colour.GREEN);
-        System.out.println(shape);
+        Triangle triangle1 = new Triangle(5,5,5);
+        triangle1.setColour(Colour.GREEN);
+        System.out.println(triangle1);
+        System.out.println("TriangleVariant: " + triangle1.getVariant());
+
+        Triangle triangle2 = new Triangle(5,4,3);
+        triangle2.setColour(Colour.GREEN);
+        System.out.println(triangle2);
+        System.out.println("TriangleVariant: " + triangle2.getVariant());
     }
 }
