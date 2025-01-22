@@ -19,6 +19,6 @@ public class Rectangle extends TwoDimensionalShape {
 
   @Override
   public String toString() {
-    return "Rectangle of dimensions " + width + " x " + height;
+    return "Rectangle of dimensions " + width + " x " + height + ", " + super.toString();
   }
 }
