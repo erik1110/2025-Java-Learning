@@ -7,4 +7,6 @@ public abstract class TwoDimensionalShape {
   public abstract double calculateArea();
 
   public abstract int calculatePerimeterLength();
+
+  public abstract String toString();
 }

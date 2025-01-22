@@ -1,6 +1,6 @@
 package edu.uob;
 
-public class Triangle {
+public class Triangle extends TwoDimensionalShape{
   private int side1;
   private int side2;
   private int side3;
@@ -27,5 +27,9 @@ public class Triangle {
   // TODO implement me!
   public int calculatePerimeterLength() {
     return 0;
+  }
+
+  public String toString() {
+    return "Triangle with 3 sides: " + this.side1 + " " + this.side2 + " " + this.side3;
   }
 }

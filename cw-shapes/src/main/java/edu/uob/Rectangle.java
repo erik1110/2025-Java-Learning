@@ -17,6 +17,7 @@ public class Rectangle extends TwoDimensionalShape {
     return 2 * (width + height);
   }
 
+  @Override
   public String toString() {
     return "Rectangle of dimensions " + width + " x " + height;
   }
