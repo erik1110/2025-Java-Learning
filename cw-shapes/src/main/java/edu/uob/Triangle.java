@@ -1,6 +1,6 @@
 package edu.uob;
 
-public class Triangle extends TwoDimensionalShape{
+public class Triangle extends TwoDimensionalShape implements MultiVariantShape{
   private int side1;
   private int side2;
   private int side3;
@@ -44,6 +44,7 @@ public class Triangle extends TwoDimensionalShape{
     return this.getClass().getSimpleName() +" with 3 sides: " + this.side1 + " " + this.side2 + " " + this.side3 + ", " + super.toString();
   }
 
+  @Override
   public TriangleVariant getVariant() {
     return this.variant;
   }

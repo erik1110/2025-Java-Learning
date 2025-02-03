@@ -3,6 +3,8 @@ package edu.uob;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 
 class TriangleTests {
 
@@ -111,5 +113,16 @@ class TriangleTests {
         double expectedArea = 18;
         double actualPerimeter = triangle.calculatePerimeterLength();
         assertEquals(expectedArea, actualPerimeter, 0, "周長計算錯誤");
+    }
+
+    @Test
+    void testTriangleImplementsMultiVariantShape() {
+        TwoDimensionalShape triangle = new Triangle(3, 4, 5);
+        TwoDimensionalShape circle = new Circle(5);
+        TwoDimensionalShape rectangle = new Rectangle(4, 6);
+
+        assertTrue(triangle instanceof MultiVariantShape, "Triangle should be a MultiVariantShape");
+        assertFalse(circle instanceof MultiVariantShape, "Circle should NOT be a MultiVariantShape");
+        assertFalse(rectangle instanceof MultiVariantShape, "Rectangle should NOT be a MultiVariantShape");
     }
 }
