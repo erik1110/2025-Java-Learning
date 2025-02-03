@@ -1,5 +1,7 @@
 package edu.uob;
 
+import java.sql.SQLOutput;
+
 public class Main {
     public static void main(String[] args) {
         TwoDimensionalShape shape;
@@ -21,5 +23,7 @@ public class Main {
         triangle2.setColour(Colour.GREEN);
         System.out.println(triangle2);
         System.out.println("TriangleVariant: " + triangle2.getVariant());
+        System.out.println("Triangle Area: " + triangle2.calculateArea());
+        System.out.println("Triangle Perimeter: " + triangle2.calculatePerimeterLength());
     }
 }

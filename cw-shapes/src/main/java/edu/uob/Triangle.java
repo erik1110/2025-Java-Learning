@@ -28,13 +28,16 @@ public class Triangle extends TwoDimensionalShape{
     }
   }
   // TODO implement me!
+  @Override
   public double calculateArea() {
-    return 0;
+    double s = (this.side1 + this.side2 + this.side3 ) / 2.0;
+    return Math.sqrt(s*(s-this.side1)*(s-this.side2)*(s-this.side3));
   }
 
   // TODO implement me!
+  @Override
   public int calculatePerimeterLength() {
-    return 0;
+    return this.side1 + this.side2 + this.side3;
   }
 
   public String toString() {
