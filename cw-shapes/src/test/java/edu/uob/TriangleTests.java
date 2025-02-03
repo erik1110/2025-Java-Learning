@@ -95,4 +95,21 @@ class TriangleTests {
         assertShapeVariant(TriangleVariant.SCALENE, new Triangle(2000000001, 2000000002, 2000000003));
         assertShapeVariant(TriangleVariant.SCALENE, new Triangle(150000002, 666666671, 683333338));
     }
+
+    // Test Calculate
+    @Test
+    void testCalculateArea() {
+        Triangle triangle = new Triangle(5, 6, 7);
+        double expectedArea = 14.6969;
+        double actualArea = triangle.calculateArea();
+        assertEquals(expectedArea, actualArea, 0.0001, "面積計算錯誤");
+    }
+
+    @Test
+    void testCalculatePerimeter() {
+        Triangle triangle = new Triangle(5, 6, 7);
+        double expectedArea = 18;
+        double actualPerimeter = triangle.calculatePerimeterLength();
+        assertEquals(expectedArea, actualPerimeter, 0, "周長計算錯誤");
+    }
 }
