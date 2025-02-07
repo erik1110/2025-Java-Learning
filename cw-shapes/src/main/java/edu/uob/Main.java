@@ -30,7 +30,6 @@ public class Main {
 
         TwoDimensionalShape[] shapes = new TwoDimensionalShape[100];
         Random rand = new Random();
-        int triangleCount = 0;
         for (int i = 0; i < 100; i++) {
             double randomValue = Math.random();
                 if (randomValue < 0.33) {
@@ -39,7 +38,6 @@ public class Main {
                     shapes[i] = new Rectangle((int) Math.ceil(rand.nextDouble() * 10), (int) Math.ceil(rand.nextDouble() * 10));
                 } else {
                     shapes[i] = new Triangle((int) Math.ceil(rand.nextDouble() * 10), (int) Math.ceil(rand.nextDouble() * 10), (int) Math.ceil(rand.nextDouble() * 10));
-                    triangleCount++;
                 }
         }
         for (TwoDimensionalShape myShape : shapes) {
@@ -47,6 +45,6 @@ public class Main {
             System.out.println(myShape);
         }
         System.out.println("------------- RESULT ----------");
-        System.out.println("Total number of triangles: " + triangleCount);
+        System.out.println("Total number of triangles: " + Triangle.getPopulationSize());
     }
 }

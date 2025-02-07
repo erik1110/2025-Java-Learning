@@ -11,7 +11,18 @@ public class OXOController implements Serializable {
         gameModel = model;
     }
 
-    public void handleIncomingCommand(String command) throws OXOMoveException {}
+    public void handleIncomingCommand(String command) throws OXOMoveException {
+        command = command.toLowerCase();
+        int firstChar = command.charAt(0) - 'a';
+        int lastChar = command.charAt(1) - '1';
+        gameModel.setCellOwner(firstChar, lastChar, gameModel.getPlayerByNumber(gameModel.getCurrentPlayerNumber()));
+        // change to next player
+        int nextPlayerNumber = gameModel.getCurrentPlayerNumber() + 1;
+        if (nextPlayerNumber > gameModel.getPlayerLength()) {
+            nextPlayerNumber = 0;
+        }
+        gameModel.setCurrentPlayerNumber(nextPlayerNumber);
+    }
     public void addRow() {}
     public void removeRow() {}
     public void addColumn() {}

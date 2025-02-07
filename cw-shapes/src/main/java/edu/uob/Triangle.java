@@ -9,6 +9,8 @@ public class Triangle extends TwoDimensionalShape implements MultiVariantShape{
   private int sum2;
   private int sum3;
 
+  static int populationSize = 0;
+
   private TriangleVariant variant;
   // TODO implement me!
   public Triangle(int side1, int side2, int side3) {
@@ -17,6 +19,7 @@ public class Triangle extends TwoDimensionalShape implements MultiVariantShape{
     this.side3 = side3;
     this.sumTwoSide();
     this.determineVariant();
+    populationSize++;
   }
   public int getLongestSide() {
     if (this.side1 > this.side2 && this.side1 > this.side3) {
@@ -93,5 +96,9 @@ public class Triangle extends TwoDimensionalShape implements MultiVariantShape{
     } else {
       this.variant = null;
     }
+  }
+
+  public static int getPopulationSize() {
+    return Triangle.populationSize;
   }
 }

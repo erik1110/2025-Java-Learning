@@ -22,7 +22,6 @@ public class OXOModel implements Serializable {
         return players.length;
     }
 
-
     public void addPlayer(OXOPlayer player) {
         for (int i = 0; i < players.length; i++) {
             if (players[i] == null) {
@@ -51,6 +50,8 @@ public class OXOModel implements Serializable {
     public void setCurrentPlayerNumber(int playerNumber) {
         currentPlayerNumber = playerNumber;
     }
+
+    public int getPlayerLength() { return players.length; }
 
     public int getNumberOfRows() {
         return cells.length;
